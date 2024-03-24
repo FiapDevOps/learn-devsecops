@@ -194,9 +194,7 @@ conftest test tfplan.json
 
 Você receberá a seguinte mensagem:
 
-![alt tag](https://github.com/FiapDevOps/learn-security-gate/blob/6a3784ec5adf37a6a2c04cbaaeb54b92743a0687/images/conftest_fail.png)
-
-
+![alt tag](images/conftest_fail.png)
 
 ---
 
