@@ -3,7 +3,7 @@ Laboratório simples com um teste de implantação usando terraform e aplicaçã
 
 ![alt tag](images/opa_logo.png)
 
-## PARTE 1: Testes usando o terraform e o conceito de iac:
+## Parte 1: Testes usando o terraform e o conceito de iac:
 
 Para execução deste laboratório crie uma cópia local deste repositório:
 
@@ -46,7 +46,7 @@ terraform apply
 
 ---
 
-## PARTE 2: Testes usando um princípio de validação de políticas sobre o código
+## Parte 2: Testes usando um princípio de validação de políticas sobre o código
 
 Nesta etapa utilizaremos uma solução simples para criar um mecanismo de controle, o objetivo é simular o processo de validação sobre as regras criadas na PARTE 1, o mecanismo que será usado neste teste é o [conftest](https://www.conftest.dev/) uma solução de linha de comando para testes sobre dados estruturados.
 
@@ -200,7 +200,7 @@ Você receberá a seguinte mensagem:
 
 ---
 
-## PARTE3: Complicando o teste:
+## Parte 3: Complicando o teste:
 
 Considere o bloco a seguir com uma segunda regra que poderia seria adicionada ao final do aruqivo validar_sg.rego:
 
@@ -230,11 +230,11 @@ not_equal_cidr(cidr, target) {
 
 Sobre quais situações essa regra seria envalidada repetindo os testes anteriores com conftest?
 
-**Outras referências**
+### Outras Referências
 
-Para um exemplo baseado em outro contexto considere este artigo da AWS com outros modelos mais complexos de validação de fluxo: [https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html);
+- Para um exemplo baseado em outro contexto considere este artigo da AWS com outros modelos mais complexos de validação de fluxo: [https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html);
 
-Neste outro exemplo publicado por Miguel A Menendez a mesma lógica é aplicada a outro contexto, a validação sobre uma whitelist de imagens para containers: [https://menendezjaume.com/post/policy-as-code-exceptions-lists/](https://menendezjaume.com/post/policy-as-code-exceptions-lists/);
+- Neste outro exemplo publicado por Miguel A Menendez a mesma lógica é aplicada a outro contexto, a validação sobre uma whitelist de imagens para containers: [https://menendezjaume.com/post/policy-as-code-exceptions-lists/](https://menendezjaume.com/post/policy-as-code-exceptions-lists/);
 
 ---
 
