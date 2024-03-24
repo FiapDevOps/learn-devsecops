@@ -1,0 +1,5 @@
+title: Uma pitada de iac para Segurança em Cloud
+description: Criando um grupo de segurança via terraform e validando com Open Policy Agent
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-hacker
