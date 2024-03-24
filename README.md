@@ -1,6 +1,8 @@
 # learn-security-gate
 Laboratório simples com um teste de implantação usando terraform e aplicação de um controle simples com a linguagem rego
 
+![alt tag](images/opa_logo.png)
+
 ## PARTE 1: Testes usando o terraform e o conceito de iac:
 
 Para execução deste laboratório crie uma cópia local deste repositório:
@@ -119,7 +121,7 @@ conftest test tfplan.json
 
 Você deverá receber a seguinte mensagem:
 
-![alt tag](https://github.com/FiapDevOps/learn-security-gate/blob/6a3784ec5adf37a6a2c04cbaaeb54b92743a0687/images/conftest_pass.png)
+![alt tag](images/conftest_pass.png)
 
 
 > Isso signifca que a estrutura fornecida em json não viola a regra estabelecida no arquivo validar_sg.rego criado na pasta policy.
