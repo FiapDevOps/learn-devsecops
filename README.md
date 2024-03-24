@@ -1,4 +1,4 @@
-# learn-devsecops
+# learn-security-gate
 Laboratório simples com um teste de implantação usando terraform e aplicação de um controle simples com a linguagem rego
 
 ## PARTE 1: Testes usando o terraform e o conceito de iac:
@@ -6,7 +6,7 @@ Laboratório simples com um teste de implantação usando terraform e aplicaçã
 Para execução deste laboratório crie uma cópia local deste repositório:
 
 ```sh
-git clone https://github.com/fiapdevops/learn-devsecops.git
+git clone https://github.com/fiapdevops/learn-security-gate.git
 ```
 
 1.2. Instalação das dependências:
@@ -119,7 +119,7 @@ conftest test tfplan.json
 
 Você deverá receber a seguinte mensagem:
 
-![alt tag](https://raw.githubusercontent.com/FiapDevOps/observability/f8ccc0419face4b2b99aea68536d21551c699bc7/img-src/prometheus_logo.png)
+![alt tag](https://github.com/FiapDevOps/learn-security-gate/blob/6a3784ec5adf37a6a2c04cbaaeb54b92743a0687/images/conftest_pass.png)
 
 
 > Isso signifca em ess6encia que a estrutura fornecida em Json não viola a regra estabelecida no arquivo validar_sg.rego criado na pasta policy.
@@ -188,7 +188,9 @@ conftest test tfplan.json
 
 Você receberá a seguinte mensagem:
 
-![alt tag](https://raw.githubusercontent.com/FiapDevOps/observability/f8ccc0419face4b2b99aea68536d21551c699bc7/img-src/prometheus_logo.png)
+![alt tag](https://github.com/FiapDevOps/learn-security-gate/blob/6a3784ec5adf37a6a2c04cbaaeb54b92743a0687/images/conftest_fail.png)
+
+
 
 ---
 
