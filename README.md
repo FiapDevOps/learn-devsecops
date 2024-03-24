@@ -65,7 +65,7 @@ sudo mv conftest /usr/local/bin
 mkdir policy
 ```
 
-2.3. Usando o edito de sua preferência escreva a regra de testes:
+2.3. Usando o editor de sua preferência escreva a regra de testes:
 
 ```sh
 cat <<EOF > policy/validar_sg.rego
@@ -122,7 +122,7 @@ Você deverá receber a seguinte mensagem:
 ![alt tag](https://github.com/FiapDevOps/learn-security-gate/blob/6a3784ec5adf37a6a2c04cbaaeb54b92743a0687/images/conftest_pass.png)
 
 
-> Isso signifca em ess6encia que a estrutura fornecida em Json não viola a regra estabelecida no arquivo validar_sg.rego criado na pasta policy.
+> Isso signifca que a estrutura fornecida em json não viola a regra estabelecida no arquivo validar_sg.rego criado na pasta policy.
 
 ### Criando uma violação como contra-prova
 
