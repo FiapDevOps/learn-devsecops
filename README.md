@@ -50,6 +50,10 @@ terraform apply
 
 Nesta etapa utilizaremos uma solução simples para criar um mecanismo de controle, o objetivo é simular o processo de validação sobre as regras criadas na PARTE 1, o mecanismo que será usado neste teste é o [conftest](https://www.conftest.dev/) uma solução de linha de comando para testes sobre dados estruturados.
 
+O conftest fará a validação usando a linguagem declarativa [rego](https://www.openpolicyagent.org/docs/latest/policy-language/) do solução [Open Policy Agent](https://www.openpolicyagent.org/) conforme o fluxo abaixo:
+
+![alt tag](images/opa_flow.png)
+
 2.1. Faça a instalação do conftest, copiando a sequência de comandos abaixo:
 
 ```sh
@@ -225,6 +229,12 @@ not_equal_cidr(cidr, target) {
 ```
 
 Sobre quais situações essa regra seria envalidada repetindo os testes anteriores com conftest?
+
+**Outras referências**
+
+Para um exemplo baseado em outro contexto considere este artigo da AWS com outros modelos mais complexos de validação de fluxo: [https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html);
+
+Neste outro exemplo publicado por Miguel A Menendez a mesma lógica é aplicada a outro contexto, a validação sobre uma whitelist de imagens para containers: [https://menendezjaume.com/post/policy-as-code-exceptions-lists/](https://menendezjaume.com/post/policy-as-code-exceptions-lists/);
 
 ---
 
