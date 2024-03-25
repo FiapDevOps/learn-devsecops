@@ -198,34 +198,6 @@ Você receberá a seguinte mensagem:
 
 ---
 
-## Parte 3: Complicando o teste:
-
-Considere o bloco a seguir com uma segunda regra que poderia seria adicionada ao final do aruqivo validar_sg.rego:
-
-```sh
-deny_port_22_ingress[msg] {
-    resource := input.resource_changes[_]
-    name := resource.name
-    rule := resource.change.after.ingress[_]
-    resource.type == "aws_security_group"
-    rule.from_port == 22
-    rule.to_port == 22
-    not_equal_cidr(rule.cidr_blocks[_], "192.168.0.0/24")
-    not_equal_cidr(rule.cidr_blocks[_], "172.12.0.0/16")
-
-    
-    msg = sprintf("O ASG `%v` permite acesso à porta 22 fora do padrão de segurança previsto para o ambiente", [name])
-}
-
-not_equal_cidr(cidr, target) {
-    cidr_split := split(cidr, "/")
-    target_split := split(target, "/")
-    cidr_prefix := cidr_split[0]
-    target_prefix := target_split[0]
-    cidr_prefix != target_prefix
-}
-```
-
 Sobre quais situações essa regra seria envalidada repetindo os testes anteriores com conftest?
 
 ### Outras Referências
